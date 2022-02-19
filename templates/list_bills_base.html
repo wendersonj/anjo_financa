@@ -1,0 +1,32 @@
+{%block list_bills%}
+<div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Valor mensal</th>
+            <th scope="col">Data início</th>
+            <th scope="col">Data fim</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Deletar</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        {% for bill in bills %}
+        <tr>
+            <th scope="row">{{bill.id}}</th>
+            <td>{{bill.description}}</td>
+            <td>{{bill.value}}</td>
+            <td>{{bill.initial_date}}</td>
+            <td>{{bill.final_date}}</td>
+            <td><a href="/edit/{{bill.id}}">Edit</a></td>
+            <td><a href="/delete/{{bill.id}}">Delete</a></td>
+
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{%endblock%}

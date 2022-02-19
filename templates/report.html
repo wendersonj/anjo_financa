@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{%block voltar%}
+<a class="btn btn-primary" href="/bills/generate_report" role="button">Voltar</a>
+{%endblock%}
+{% block content %}
+
+<h3>{{initial_date}} até {{final_date}}</h3>
+<div>
+    <table>
+        <tr>
+            <th>Quantidade de faturas:</th>
+            <td>{{ bills|length}}</td>
+        </tr>
+
+        <tr>
+            <th>Valor Total:</th>
+            <td>R$ {{total_value}}</td>
+        </tr>
+
+
+        </tbody>
+    </table>
+</div>
+
+
+{% include "list_bills_base.html" %}
+
+{% endblock %}

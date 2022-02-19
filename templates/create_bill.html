@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{%block voltar%}
+<a class="btn btn-primary" href="/bills" role="button">Voltar</a>
+{%endblock%}
+{% block content %}
+
+
+<form action="/bills/add" method="post">
+    <input type="text" name="description" placeholder="digite uma descricao" value="{{description if description}}"
+           required/>
+    <input name="initial_date" type="date" value="2022/01/01" required>
+    <input name="final_date" type="date" value="2022/01/01" required>
+    <input name="bill_value" type="number" value="10" required>
+
+    <input type="submit" value="Add"/>
+</form>
+
+{% endblock %}
+
