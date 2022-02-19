@@ -1,2 +1,2 @@
-# anjo_financas
-Anjo finanças - Gerenciador financeiro
+# anjo_financa
+Anjo finança - Gerenciador financeiro
